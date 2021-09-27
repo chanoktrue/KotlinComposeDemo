@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ComposeDemo</string>
+    <string name="title_activity_part2">Part2Activity</string>
 </resources>

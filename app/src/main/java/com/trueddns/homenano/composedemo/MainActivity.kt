@@ -10,29 +10,24 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.trueddns.homenano.composedemo.ui.theme.ComposeDemoTheme
 
+// https://www.youtube.com/watch?v=cDabx3SjuOY&list=PLQkwcJG4YTCSpJ2NLhDTHhi6XBNfk9WiC&index=1
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ComposeDemoTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
-            }
+            Greeting(name = "Philipp")
         }
     }
 }
 
 @Composable
-fun Greeting(name: String) {
+fun Greeting(name: String) { 
     Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    ComposeDemoTheme {
-        Greeting("Android")
-    }
+  Greeting(name = "test")
 }
