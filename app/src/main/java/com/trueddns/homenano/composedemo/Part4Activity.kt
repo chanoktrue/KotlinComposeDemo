@@ -33,14 +33,14 @@ class Part4Activity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Home()
+            Home4()
         }
     }
 }
 
 @Preview
 @Composable
-fun Home() {
+fun Home4() {
     
     val painter = painterResource(id = R.drawable.kotlin)
     val description = "Kotlin photos"
@@ -50,7 +50,6 @@ fun Home() {
         modifier = Modifier
             .fillMaxWidth(1f)
             .padding(16.dp)
-            .background(Color.Red)
     ) {
         ImageCard(painter, description, title)
     }
@@ -79,6 +78,15 @@ fun ImageCard(painter: Painter, contentDescription: String, title: String, modif
             Box(
                 modifier = Modifier
                     .fillMaxSize()
+                    .background(
+                        Brush.verticalGradient(
+                            colors = listOf(
+                                Color.Transparent,
+                                Color.Black
+                            ),
+                            startY = 300f
+                        )
+                    )
             )
 
             Box(
